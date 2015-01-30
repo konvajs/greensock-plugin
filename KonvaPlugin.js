@@ -127,7 +127,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		_createGetterSetter = function(getter, setter) {
 			return function(value) {return (arguments.length) ? setter(value) : getter(); };
 		},
-		//looks at every property in the vars and converts them (when appropriate) to the KineticJS equivalent. If it finds a special property for which "x" and "y" must be split apart (like scale, offset, shadowOffset, etc.), it will do that as well. This method returns an array of any names it had to change (like "x", "y", "scale", etc.) so that they can be used in the overwriteProps array.
+		//looks at every property in the vars and converts them (when appropriate) to the KonvaJS equivalent. If it finds a special property for which "x" and "y" must be split apart (like scale, offset, shadowOffset, etc.), it will do that as well. This method returns an array of any names it had to change (like "x", "y", "scale", etc.) so that they can be used in the overwriteProps array.
 		_convertProps = function(target, vars) {
 			var converted = [],
 				p, val, i, proto;
@@ -187,9 +187,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
 		init: function(target, value, tween) {
 			var p, val, gp, sp, bezierPlugin, directionalRotationPlugin;
-			if (!versionValid && (versionValid = (parseInt(Kinetic.version.split(".")[0], 10)) < 5)) {
-				throw ("The GSAP KonvaPlugin that's loaded requires KineticJS version 5.0.0 or later. For earlier versions, use KonvaPlugin from GSAP 1.11.3 or earlier.");
-			}
 			this._overwriteProps = _convertProps(target, value); //allow users to pass in shorter names like "x" instead of "setX" and "rotationDeg" instead of "setRotationDeg"
 			this._target = target;
 			this._layer = (value.autoDraw !== false) ? target.getLayer() : null;
