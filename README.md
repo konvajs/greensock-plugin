@@ -2,7 +2,7 @@
 
 This is forked plugin from [KineticJS GreenSock Plugin](http://greensock.com/docs/#/HTML5/Plugins/KineticPlugin/)
 
-Demo: [http://konvajs.github.io/docs/tweens/GreenSock_Plugin.html](http://konvajs.github.io/docs/tweens/GreenSock_Plugin.html)
+Demo: [http://konvajs.github.io/docs/tweens/Complex_Tweening.html](http://konvajs.github.io/docs/tweens/Complex_Tweening.html)
 
 Enables `TweenLite` and `TweenMax` to animate properties of `Konva` objects (see [http://konvajs.github.io/](http://konvajs.github.io/)) in a much easier and high-performance manner than doing so directly through the Konva API. The native Konva API gives you very limited ability to build and control sequences or animate along Bezier paths or do directional rotation or all sorts of things that GSAP delivers in spades. Using GSAP with this the KonvaPlugin gives you a far more robust toolset for animating in KonvaJS.
 
