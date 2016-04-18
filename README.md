@@ -28,7 +28,7 @@ But with the plugin, things are simplified to this:
 
 ```javascript
 // with the plugin, it's more intuitive and concise:
-TweenLite.to(star, 5, {kinetic:{x:500, y:100, innerRadius:15, rotation:360}, ease:Power4.easeOut});
+TweenLite.to(star, 5, {konva:{x:500, y:100, innerRadius:15, rotation:360}, ease:Power4.easeOut});
 ```
 
 Plus, without the plugin it's more difficult to tween colors or do Bezier tweening or directional rotation, rounding property values, etc.
